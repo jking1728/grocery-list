@@ -8,12 +8,13 @@ $(document).ready(function() {
             return $("input#" + input).val().toUpperCase();
            
         });
-        var abcgroceries = groceries.map(function(item) {
-            return groceries.sort();
-        });
+        var abcgroceries = groceries.sort();
         $("form#blanks").hide();
-        $("ul#output-list").text("<li>" + abcgroceries + "</li>");
         
+        
+        abcgroceries.forEach(function(item) {
+            $("ul#output-list").append("<li>" + item + "</li>");
+        });
 
         // alert(groceries)
         
